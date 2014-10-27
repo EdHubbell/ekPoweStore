@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html data-ng-app="ngApp">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title></title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/main.css">
+<link href='http://fonts.googleapis.com/css?family=Duru+Sans|Istok+Web' rel='stylesheet' type='text/css'><link rel="stylesheet" href="css/bootstrap-theme.min.css">
+</head>
+<body data-ng-controller="main" >
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img ng-src="{{site_logo}}"/> {{sitename}}</a>
+        </div>
+        <div class="navbar-collapse collapse" style="position:relative">
+			<div class="simplecart_div">
+				<span class="showCart"><i class="fa fa-shopping-cart"></i> <span class="simpleCart_quantity"></span> items - <span class="simpleCart_total"></span> <i class="dropdown fa fa-chevron-circle-down"></i> &nbsp;&nbsp;</span>
+				<button class="simpleCart_checkout btn btn-xs btn-primary">Checkout</button>
+			</div>
+			<div id="cartPopover" style="display:none">
+				<div class="simpleCart_items"></div>
+			</div>
+			
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+			<div id="content">
+					<h1 class="page_title">{{pagetitle}}</h1>
+					<div class="page_description">{{pagedescription}}</div>
+					<div class="loading"><i style="vertical-align:middle;color:#888;font-size:30px" class="fa fa-cog fa-spin"></i> loading...</div>
+				    <div data-ng-view=""></div>
+				</div>
+			</div>
+        </div>
+      <hr>
+
+      <footer>
+        <p>&copy; {{sitename}} 2014 | Contact me at {{siteemail}} | Powered by <a href="http://paypalinstant.com">PayPal Instant Store Cart</a></p>
+      </footer>
+    </div> 
+	<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+	<script src="js/vendor/jquery-1.10.1.min.js"></script>
+    <script src="js/vendor/angular.js"></script>
+  	<script src="js/vendor/angular-resource.min.js"></script>
+	<script src="js/vendor/angular-route.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+	<script src="js/tabletop.js"></script>
+    <script src="js/simpleCart.min.js"></script>
+	<script src="js/app.js"></script>
+	
+	<script id='script'>
+	
+	// MUST CHANGE THIS URL TO YOUR OWN "PUBLISHED" GOOGLE DOC URL
+	public_spreadsheet_url = "https://docs.google.com/spreadsheet/pub?key=0AlG6rs6-cJLvdG1xNTd1My1VLUFEamlMZkNWSFBDX2c&output=html";
+	sheet = "Sheet1";  // NORMALLY called Sheet1 on default Google Docs spreadsheet
+	
+	$(document).ready(function() {
+		$('.showCart').on('click',function() {
+			$('#cartPopover').slideToggle('fast');
+			$('.showCart i.dropdown').toggleClass('fa-chevron-circle-down fa-chevron-circle-up');
+		})
+	});
+
+    </script>
+    </body>
+</html>
+	
