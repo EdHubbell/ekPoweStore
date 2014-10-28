@@ -1,6 +1,6 @@
 <div data-ng-template="table" class="items">
 	<div class="simpleCart_shelfItem item" data-ng-repeat="item in items" size-column>
-		<div class="item_image"><img ng-src="{{ item.imagelink }}"/></div>
+		<div class="item_image"><img ng-src="{{ item.imagelink }}" class="img-responsive"/></div>
 	  	<h2 class="item_name">{{ item.name }}</h2>
 	  	<button class="item_add btn btn-success"> Add to Cart</button> 
 	  	<span class="item_price"> ${{item.price}}</span>
