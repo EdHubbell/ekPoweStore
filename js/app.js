@@ -5,7 +5,7 @@ ngApp
          $sceDelegateProvider.resourceUrlWhitelist(['self', 'https://script.googleusercontent.com**', 'http://drive.google.com/**']);
      }])
 
-    // added this to get rid of the auto adding of \#\ to the end of the address.
+    // added this to get rid of the auto adding of \#\ to the end of the address
     .config(['$locationProvider', function($locationProvider){
       $locationProvider.html5Mode(true).hashPrefix('!');
     }])
