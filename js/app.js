@@ -5,21 +5,25 @@ ngApp
          $sceDelegateProvider.resourceUrlWhitelist(['self', 'https://script.googleusercontent.com**', 'http://drive.google.com/**']);
      }])
 
-.config(function($routeProvider) {
-    $routeProvider
-    .when('/',
-    {
-        controller: 'main',
-        templateUrl: 'pages/items.html'
-    })
-    .otherwise({
-        redirectTo: '/'
-    })
-  });
- 
+    .config(['$locationProvider', function($locationProvider){
+      $locationProvider.html5Mode(true).hashPrefix('!');
+    }])
+
+    .config(function($routeProvider) {
+      $routeProvider
+      .when('/',
+      {
+          controller: 'main',
+          templateUrl: 'pages/items.html'
+      })
+      .otherwise({
+          redirectTo: '/'
+      })
+    });
+   
 
   
-ngApp.controller('main', function($scope, $routeParams, $http, $timeout){
+ngApp.controller('main', function($scope, $http, $timeout){
 	  Tabletop.init({ key: public_spreadsheet_url,
 	        callback: createStore,
 	  	 	wanted: [sheet],
