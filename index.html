@@ -17,6 +17,23 @@
 </head>
 
 <body data-ng-controller="main" >
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '728778103878454',
+        xfbml      : true,
+        version    : 'v2.2'
+      });
+    };
+
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>
 
   <div class="container">
     <iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fekpowestore.azurewebsites.net%2F&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80&amp;appId=728778103878454" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:80px;" allowTransparency="true"></iframe>
@@ -81,6 +98,10 @@
       <p>&copy; E.K. Powe PTA 2014 | Contact us at {{siteemail}}</p>
     </footer>
   </div> 
+
+  <div class="container">
+    <div class="fb-like" data-share="true" data-width="450" data-show-faces="true">
+  </div>
 
 	<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 	<script src="js/vendor/jquery-1.10.1.min.js"></script>
