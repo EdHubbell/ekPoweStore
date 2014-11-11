@@ -25,6 +25,14 @@
 
 <body data-ng-controller="main" >
 
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=728778103878454&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
 
   <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -86,12 +94,7 @@
   </div> 
 
   <div class="container">
-    <div
-      class="fb-like"
-      data-share="true"
-      data-width="450"
-      data-show-faces="true">
-    </div>
+    <div class="fb-like" data-href="http://ekpowestore.azurewebsites.net/" data-width="800" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
   </div>
 
 
@@ -130,27 +133,6 @@
     ga('send', 'pageview');
 
   </script>
-
-  <script>
-    window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '728778103878454',
-      xfbml      : true,
-      version    : 'v2.1'
-    });
-    };
-
-    (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-     }(document, 'script', 'facebook-jssdk'));
-  </script>
-
-
-
 
 </body>
 
