@@ -26,16 +26,6 @@
 <body data-ng-controller="main" >
 
   <div id="fb-root"></div>
-  <script>
-
-    FB.init({
-      appId      : '{your-app-id}',
-      status     : true,
-      xfbml      : true,
-      version    : 'v2.0'
-    });
-
-  </script>
 
   <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
@@ -43,7 +33,18 @@
     js = d.createElement(s); js.id = id;
     js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=728778103878454&version=v2.0";
     fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
+  }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+
+  <script>
+    FB.init({
+      appId      : '728778103878454',
+      status     : true,
+      xfbml      : true,
+      version    : 'v2.0'
+    });
+  </script>
 
   <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
