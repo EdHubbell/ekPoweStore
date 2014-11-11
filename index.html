@@ -26,6 +26,17 @@
 <body data-ng-controller="main" >
 
   <div id="fb-root"></div>
+  <script>
+
+    FB.init({
+      appId      : '{your-app-id}',
+      status     : true,
+      xfbml      : true,
+      version    : 'v2.0'
+    });
+
+  </script>
+
   <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
