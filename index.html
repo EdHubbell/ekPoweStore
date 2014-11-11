@@ -20,28 +20,29 @@
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/main.css">
   <link href='http://fonts.googleapis.com/css?family=Duru+Sans|Istok+Web' rel='stylesheet' type='text/css'><link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+  <script>
+    window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '728778103878454',
+      xfbml      : true,
+      version    : 'v2.1'
+    });
+    };
+
+    (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>
+
 </head>
 
 <body data-ng-controller="main" >
 
-  <div id="fb-root"></div>
-	<script>
-	  window.fbAsyncInit = function() {
-		FB.init({
-		  appId      : '728778103878454',
-		  xfbml      : true,
-		  version    : 'v2.1'
-		});
-	  };
-
-	  (function(d, s, id){
-		 var js, fjs = d.getElementsByTagName(s)[0];
-		 if (d.getElementById(id)) {return;}
-		 js = d.createElement(s); js.id = id;
-		 js.src = "//connect.facebook.net/en_US/sdk.js";
-		 fjs.parentNode.insertBefore(js, fjs);
-	   }(document, 'script', 'facebook-jssdk'));
-	</script>
 
   <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -147,6 +148,8 @@
     ga('send', 'pageview');
 
   </script>
+
+
 </body>
 
 </html>
