@@ -83,6 +83,10 @@
       				<p><strong>NEW!</strong> Give back to our community by purchasing 6" red poinsettias for a homebound neighbor. PTA volunteers will deliver the plants after December 6.</p>					
       			</div>
       			
+            <h3>
+              <timer end-time="1420070400000" max-time-unit="'day'" interval="1000"> Order now!  Sale ends in {{ddays}}d:{{hhours}}h:{{mminutes}}m:{{sseconds}}s</timer>
+            </h3>
+
       			<div class="loading"><i style="vertical-align:middle;color:#888;font-size:30px" class="fa fa-cog fa-spin"></i> loading...</div>
       		    <div data-ng-view=""></div>
       		</div>
@@ -92,11 +96,8 @@
       <hr>
 
       <div class="container">
-        <h3>
-            <timer end-time="1420070400000" max-time-unit="'day'" interval="1000"> Order now!  Sale ends in {{ddays}}d:{{hhours}}h:{{mminutes}}m:{{sseconds}}s</timer>
-        </h3>
+        <div class="fb-like" data-share="true" data-width="450" data-show-faces="true">
       </div>
-
 
       <footer>
         <p>&copy; E.K. Powe PTA 2014 | Contact us at {{siteemail}}</p>
@@ -104,9 +105,6 @@
     </div> 
   </div>
   
-  <div class="container">
-    <div class="fb-like" data-share="true" data-width="450" data-show-faces="true">
-  </div>
 
 
 
