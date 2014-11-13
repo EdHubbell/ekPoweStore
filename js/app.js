@@ -33,10 +33,13 @@ ngApp.controller('main', function($scope, $http, $timeout){
 	  $scope.$broadcast('timer-start');
     console.log('hool2');
 
-	function createStore (data,tabletop) {
-    $scope.$broadcast('timer-start');
-    console.log('hool');
+    var currentDate = new Date();
+    var saleEndDate = new Date(2014, 11, 21, 18, 30, 0, 0);
+    $scope.countdownTime = 1000 * (saleEndDate - currentDate);
+    console.log($scope.countdownTime);    
 
+	function createStore (data,tabletop) {
+    
 		$timeout(function() {
 		$scope.items = data;
 		$scope.sitename = data[0].sitename;
