@@ -1,4 +1,4 @@
-var ngApp = angular.module('ngApp',['ngResource', 'ngRoute']);
+var ngApp = angular.module('ngApp',['ngResource', 'ngRoute', 'timer']);
 
 ngApp
     .config(['$sceDelegateProvider', function($sceDelegateProvider) {
@@ -32,6 +32,8 @@ ngApp.controller('main', function($scope, $http, $timeout){
 	  })
 	  
 	function createStore (data,tabletop) {
+    $scope.$broadcast('timer-start');
+    
 		$timeout(function() {
 		$scope.items = data;
 		$scope.sitename = data[0].sitename;
