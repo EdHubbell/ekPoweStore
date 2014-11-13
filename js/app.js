@@ -30,16 +30,6 @@ ngApp.controller('main', function($scope, $http, $timeout){
 	        simpleSheet: true
 	  })
 
-    var currentDate = new Date();
-    // yes, months are 0 based....
-    var saleEndDate = new Date(2014, 10, 21, 18, 30, 0, 0);
-    var countdownTime = Math.floor((saleEndDate - currentDate)/1000);
-    console.log(countdownTime);    
-       
- 
-    $scope.$broadcast('timer-stop');
-    $scope.$broadcast('timer-set-countdown-seconds', countdownTime);
-    $scope.$broadcast('timer-start');
  
 	function createStore (data,tabletop) {
     
@@ -51,7 +41,7 @@ ngApp.controller('main', function($scope, $http, $timeout){
 		$scope.siteemail = data[0].siteemail;
 		$scope.paypalemail = data[0].paypalemail;
 		$scope.sitelogo = data[0].sitelogo;
-	  	$scope.paypal_email = data[0].paypalemail;
+	  $scope.paypal_email = data[0].paypalemail;
 		
 		$('.loading').hide(); // hide spinner
   		
@@ -75,7 +65,8 @@ ngApp.controller('main', function($scope, $http, $timeout){
   		}, 400);
 	}
   	  	
-      
+  main.$inject = ['$scope'];
+
 });
 
 
@@ -104,4 +95,17 @@ function reset_itemHeight() {
       });    
 }
 
+function timingController($scope) {
+    var currentDate = new Date();
+    // yes, months are 0 based....
+    var saleEndDate = new Date(2014, 10, 21, 18, 30, 0, 0);
+    var countdownTime = Math.floor((saleEndDate - currentDate)/1000);
+    console.log(countdownTime);    
+       
+ 
+    $scope.$broadcast('timer-stop');
+    $scope.$broadcast('timer-set-countdown-seconds', countdownTime);
+    $scope.$broadcast('timer-start');
+}
+timingController.$inject = ['$scope'];
 
