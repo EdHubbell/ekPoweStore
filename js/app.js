@@ -65,8 +65,6 @@ ngApp.controller('main', function($scope, $http, $timeout){
   		}, 400);
 	}
   	  	
-  main.$inject = ['$scope'];
-
 });
 
 
