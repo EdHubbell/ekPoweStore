@@ -22,7 +22,6 @@ ngApp
       })
     });
    
-
   
 ngApp.controller('main', function($scope, $http, $timeout){
 	  Tabletop.init({ key: public_spreadsheet_url,
@@ -38,7 +37,7 @@ ngApp.controller('main', function($scope, $http, $timeout){
     console.log(countdownTime);    
        
  
-    $scope.$broadcast('timer-set-countdown-seconds', countdownTime);
+    $scope.$broadcast('timer-set-countdown-seconds', countdownTime.toString());
     //$scope.$broadcast('timer-start');
  
 	function createStore (data,tabletop) {
