@@ -100,10 +100,10 @@ function timingController($scope) {
     var countdownTime = Math.floor((saleEndDate - currentDate)/1000);
     console.log(countdownTime);           
 
-    $scope.$broadcast('timer-add-cd-seconds', countdownTime);
+  //  $scope.$broadcast('timer-add-cd-seconds', countdownTime);
  
 //    $scope.$broadcast('timer-set-countdown-seconds', countdownTime);
-    $scope.$broadcast('timer-start');
+//    $scope.$broadcast('timer-start');
 }
 timingController.$inject = ['$scope'];
 
