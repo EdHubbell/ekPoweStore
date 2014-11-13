@@ -93,17 +93,3 @@ function reset_itemHeight() {
       });    
 }
 
-function timingController($scope) {
-    var currentDate = new Date();
-    // yes, months are 0 based....
-    var saleEndDate = new Date(2014, 10, 21, 18, 30, 0, 0);
-    var countdownTime = Math.floor((saleEndDate - currentDate)/1000);
-    console.log(countdownTime);           
-
-    $scope.$broadcast('timer-add-cd-seconds', countdownTime);
- 
-//    $scope.$broadcast('timer-set-countdown-seconds', countdownTime);
-//    $scope.$broadcast('timer-start');
-}
-timingController.$inject = ['$scope'];
-
