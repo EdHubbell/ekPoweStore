@@ -30,14 +30,14 @@ ngApp.controller('main', function($scope, $http, $timeout){
 	  	 	wanted: [sheet],
 	        simpleSheet: true
 	  })
-	  $scope.$broadcast('timer-start');
-    console.log('hool2');
 
     var currentDate = new Date();
     var saleEndDate = new Date(2014, 11, 21, 18, 30, 0, 0);
-    $scope.countdownTime = 1000 * (saleEndDate - currentDate);
+    $scope.countdownTime = Math.floor((saleEndDate - currentDate)/1000);
     console.log($scope.countdownTime);    
-
+ 
+    $scope.$broadcast('timer-start');
+ 
 	function createStore (data,tabletop) {
     
 		$timeout(function() {
