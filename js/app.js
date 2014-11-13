@@ -39,7 +39,7 @@ ngApp.controller('main', function($scope, $http, $timeout){
        
  
     $scope.$broadcast('timer-set-countdown-seconds', countdownTime);
-    $scope.$broadcast('timer-start');
+    //$scope.$broadcast('timer-start');
  
 	function createStore (data,tabletop) {
     
