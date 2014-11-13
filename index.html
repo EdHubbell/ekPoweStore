@@ -101,6 +101,23 @@
     <div class="fb-like" data-share="true" data-width="450" data-show-faces="true">
   </div>
 
+  <div class="container">
+    <h3 class="WithMaxTimeUnitAsMinute">
+        <timer countdown="20041" max-time-unit="'minute'" interval="1000"> Order now!  Sale ends in {{ddays}}d:{{hhours}}h:{{mminutes}}m:{{sseconds}}s</timer>
+    </h3>
+
+    <p class="muted">countdown Time with max time unit option - second</p>
+    <h3 class="WithMaxTimeUnitAsSecond">
+        <timer countdown="10041" max-time-unit="'second'" interval="1000"> {{mminutes}} minute{{minutesS}}, {{sseconds}} second{{secondsS}}</timer>
+    </h3>
+
+    <p class="muted">countdown Time without max time unit option - minute</p>
+    <h3 class="WithoutMaxTimeUnit">
+        <timer countdown="10041" interval="1000"> {{ddays}} day{{daysS}}, {{hhours}} hour{{hoursS}}, {{mminutes}} minute{{minutesS}}, {{sseconds}} second{{secondsS}}</timer>
+    </h3>
+  </div>
+
+
 	<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 	<script src="js/vendor/jquery-1.10.1.min.js"></script>
   <script src="js/vendor/angular.min.js"></script>
@@ -109,6 +126,7 @@
   <script src="js/vendor/bootstrap.min.js"></script>
 	<script src="js/tabletop.js"></script>
   <script src="js/simpleCart.min.js"></script>
+  <script src="js/timer.js"></script>
 	<script src="js/app.js"></script>
 	
 	<script id='script'>
