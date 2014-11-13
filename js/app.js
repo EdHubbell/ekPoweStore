@@ -30,10 +30,13 @@ ngApp.controller('main', function($scope, $http, $timeout){
 	  	 	wanted: [sheet],
 	        simpleSheet: true
 	  })
-	  
+	  $scope.$broadcast('timer-start');
+    console.log('hool2');
+
 	function createStore (data,tabletop) {
     $scope.$broadcast('timer-start');
-    
+    console.log('hool');
+
 		$timeout(function() {
 		$scope.items = data;
 		$scope.sitename = data[0].sitename;
