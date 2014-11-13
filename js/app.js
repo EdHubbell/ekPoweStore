@@ -35,6 +35,9 @@ ngApp.controller('main', function($scope, $http, $timeout){
     var saleEndDate = new Date(2014, 11, 21, 18, 30, 0, 0);
     var countdownTime = Math.floor((saleEndDate - currentDate)/1000);
     console.log(countdownTime);    
+ console.log(currentDate);    
+    console.log(saleEndDate);    
+       
  
 //    $scope.$broadcast('timer-set-countdown-seconds', countdownTime);
     $scope.$broadcast('timer-start');
