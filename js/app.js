@@ -30,8 +30,8 @@ ngApp.controller('main', function($scope, $http, $timeout){
 	        simpleSheet: true
 	  })
 
-    var saleEndDate = new Date(2014, 10, 21, 18, 30, 0, 0);
-    console.log(saleEndDate.getTime());           
+    //var saleEndDate = new Date(2014, 10, 21, 18, 30, 0, 0);
+    //console.log(saleEndDate.getTime());           
 
 
  
